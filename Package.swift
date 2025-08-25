@@ -1,10 +1,13 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
     name: "swiftshield",
+    platforms: [
+        .macOS(.v10_15)  // Support macOS 10.15+ (highest available in Swift 5.3)
+    ],
     products: [
         .executable(name: "swiftshield", targets: ["swiftshield"]),
         .library(name: "SwiftShieldCore", targets: ["SwiftShieldCore"]),
