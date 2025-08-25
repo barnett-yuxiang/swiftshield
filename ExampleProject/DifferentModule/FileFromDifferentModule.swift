@@ -1,5 +1,7 @@
 import Foundation
 
 public struct StructFromDifferentModule {
-    public static func methodFromDifferentModule() {}
+    public static func methodFromDifferentModule() {
+        print("methodFromDifferentModule")
+    }
 }
