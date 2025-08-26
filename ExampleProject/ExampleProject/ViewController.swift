@@ -33,7 +33,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .green
+
         StructFromDifferentModule.methodFromDifferentModule()
+
+        #if DEBUG
+        print("Using key: \(StructFromDifferentModule.obfuscationKey)")
+        #else
+        print("Production mode active")
+        #endif
     }
 
     func method(_: SomeEnum) {
